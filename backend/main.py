@@ -50,6 +50,7 @@ async def send_contact_email(form: ContactForm):
             headers={
                 "Authorization": f"Bearer {RESEND_API_KEY}",
                 "Content-Type": "application/json",
+                "User-Agent": "ansh-portfolio/1.0",
             },
             method="POST",
         )
