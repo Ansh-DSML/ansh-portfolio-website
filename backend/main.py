@@ -53,8 +53,8 @@ async def send_contact_email(form: ContactForm):
 
         # If credentials are provided, send the email
         if SMTP_USERNAME and SMTP_PASSWORD:
-            server = smtplib.SMTP(SMTP_SERVER, SMTP_PORT)
-            server.starttls()
+            # Using SMTP_SSL on port 465 with a timeout to prevent hanging
+            server = smtplib.SMTP_SSL(SMTP_SERVER, 465, timeout=10)
             server.login(SMTP_USERNAME, SMTP_PASSWORD)
             text = msg.as_string()
             server.sendmail(SMTP_USERNAME, RECEIVER_EMAIL, text)
