@@ -1,0 +1,20 @@
+# Global ignores
+.DS_Store
+*.log
+logs/
+
+# Frontend (Node)
+frontend/node_modules/
+frontend/dist/
+
+# Backend (Python)
+backend/env/
+backend/venv/
+backend/__pycache__/
+backend/*.pyc
+
+# Environment files (CRITICAL: Do not commit secrets)
+.env
+.env.*
+backend/.env
+frontend/.env

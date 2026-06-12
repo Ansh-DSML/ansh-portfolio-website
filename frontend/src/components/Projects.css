@@ -1,0 +1,123 @@
+.projects-section {
+  background-color: var(--bg-color);
+  padding-top: 80px;
+}
+
+.projects-tabs-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 64px;
+}
+
+.projects-tabs {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.projects-tab {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #606080;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding-bottom: 8px;
+  cursor: pointer;
+  border-bottom: 1px solid transparent;
+}
+
+.projects-tab:hover {
+  color: #FFFFFF;
+}
+
+.projects-tab.active {
+  color: #FFFFFF;
+  border-bottom: 1px solid var(--accent-primary);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.project-card {
+  background-color: var(--surface-tertiary);
+  border: 1px solid rgba(96, 96, 128, 0.2);
+  border-radius: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(141, 125, 202, 0.4);
+}
+
+.project-image {
+  height: 180px;
+  background-color: #141414;
+  border-radius: 0;
+}
+
+.project-title {
+  font-size: 22px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  padding: 20px 20px 8px 20px;
+}
+
+.project-desc {
+  font-size: 14px;
+  color: #79767C;
+  line-height: 1.6;
+  padding: 0 20px 16px 20px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  flex-grow: 1;
+}
+
+.project-tags {
+  padding: 0 20px 20px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.project-tag {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent-primary);
+  background-color: #141414;
+  border: 1px solid rgba(141, 125, 202, 0.3);
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+/* Keyframe for fade in on tab change */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 300ms ease forwards;
+}
+
+@media (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-tabs {
+    gap: 16px;
+  }
+}

@@ -1,0 +1,64 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 56px;
+  background-color: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-bottom: 1px solid rgba(96, 96, 128, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 80px;
+  z-index: 1000;
+}
+
+.navbar-logo {
+  font-size: 18px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.navbar-right {
+  display: flex;
+  gap: 32px;
+}
+
+.navbar-link {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #79767C;
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.navbar-link:hover {
+  color: #FFFFFF;
+}
+
+.navbar-link.active {
+  color: #FFFFFF;
+}
+
+.navbar-link.active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--accent-primary);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 24px;
+  }
+  .navbar-right {
+    display: none; /* simple mobile fallback, ideally a hamburger menu */
+  }
+}

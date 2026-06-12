@@ -1,0 +1,40 @@
+.about-section {
+  background-color: var(--bg-color);
+  padding-top: 40px;
+  padding-bottom: 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.about-content {
+  max-width: 900px;
+  text-align: center;
+}
+
+.about-text {
+  font-size: 24px;
+  line-height: 1.6;
+  color: #C4C4C4;
+  margin-bottom: 40px;
+}
+
+.about-github-link {
+  display: inline-block;
+  padding: 16px 32px;
+  border: 1px solid rgba(96, 96, 128, 0.3);
+  color: var(--accent-primary);
+  font-size: 14px;
+  letter-spacing: 0.1em;
+}
+
+.about-github-link:hover {
+  background-color: var(--accent-primary);
+  color: var(--bg-color);
+  border-color: var(--accent-primary);
+}
+
+@media (max-width: 768px) {
+  .about-text {
+    font-size: 18px;
+  }
+}

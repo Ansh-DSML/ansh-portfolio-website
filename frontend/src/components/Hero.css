@@ -1,0 +1,113 @@
+.hero-section {
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: calc(56px + 80px); /* navbar height + spacing */
+  padding-bottom: 40px;
+}
+
+.hero-top {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-headline {
+  font-size: 120px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  line-height: 100%;
+  margin-bottom: 20px;
+}
+
+.hero-roles {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #79767C;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.hero-socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.hero-socials a:hover svg {
+  fill: var(--accent-primary);
+  transform: scale(1.1);
+}
+
+.hero-bullet {
+  color: #606080;
+}
+
+.hero-image-block {
+  width: 85%;
+  max-width: 1440px;
+  aspect-ratio: 16/7;
+  background-color: var(--surface-tertiary);
+  border: 1px solid rgba(96, 96, 128, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 48px;
+  overflow: hidden;
+}
+
+.hero-profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  opacity: 0.85; /* Slight dimming to match dark mode */
+}
+
+.hero-scroll {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.hero-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-scroll span {
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  color: #606080;
+}
+
+@media (max-width: 768px) {
+  .hero-headline {
+    font-size: 64px;
+    margin-bottom: 24px;
+  }
+  .hero-roles {
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+  .hero-bullet {
+    display: none;
+  }
+  .hero-image-block {
+    width: 100%;
+    aspect-ratio: 16/9;
+  }
+}
